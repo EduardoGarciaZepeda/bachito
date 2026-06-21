@@ -283,60 +283,91 @@ a.aprender-mas:hover{
     border-radius: 50%;
     display: block;
 }
-/* ==================== RESPONSIVE ==================== */
+/* =============== RESPONSIVE PARA CELULAR =============== */
 
-/* Para que las imágenes no se salgan del celular */
+* {
+    box-sizing: border-box;
+}
+
+/* Imágenes responsivas */
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
-/* Contenedores más cómodos en celular */
+/* Contenedor principal */
 .contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 15px;
 }
 
-/* Encabezado más limpio en celular */
+/* Encabezado en celular */
 header .contenedor {
     flex-direction: column;
+    align-items: center;
     gap: 10px;
+    padding: 10px 0;
+}
+
+.logo img {
+    max-width: 120px;     /* Logo más pequeño en celular */
+}
+
+/* Menú de navegación */
+nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+}
+
+/* Sección principal (verde) */
+.presentacion {
+    padding: 40px 0;
     text-align: center;
 }
 
-nav ul {
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-/* Título más manejable en celular */
-h1 {
-    font-size: 2rem;
-}
-
-/* Sección de acceso rápido */
-.acceso-rapido figure {
-    margin: 10px;
-}
-
-/* Artículos más legibles */
-article img {
+.presentacion h1 {
+    font-size: 2.2rem;
     margin-bottom: 15px;
 }
 
-/* Para pantallas pequeñas (celulares) */
+/* Acceso rápido */
+.acceso-rapido {
+    padding: 20px 10px;
+}
+
+.acceso-rapido ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+/* Artículos en información */
+article {
+    margin-bottom: 30px;
+}
+
+article img {
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Para celulares pequeños */
 @media (max-width: 768px) {
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
     
-    .presentacion {
-        flex-direction: column;
-        text-align: center;
+    .presentacion h1 {
+        font-size: 2rem;
     }
     
     .social {
         justify-content: center;
+        gap: 20px;
     }
 }
