@@ -283,3 +283,60 @@ a.aprender-mas:hover{
     border-radius: 50%;
     display: block;
 }
+/* ==================== RESPONSIVE ==================== */
+
+/* Para que las imágenes no se salgan del celular */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contenedores más cómodos en celular */
+.contenedor {
+    padding: 0 15px;
+}
+
+/* Encabezado más limpio en celular */
+header .contenedor {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Título más manejable en celular */
+h1 {
+    font-size: 2rem;
+}
+
+/* Sección de acceso rápido */
+.acceso-rapido figure {
+    margin: 10px;
+}
+
+/* Artículos más legibles */
+article img {
+    margin-bottom: 15px;
+}
+
+/* Para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .presentacion {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .social {
+        justify-content: center;
+    }
+}
